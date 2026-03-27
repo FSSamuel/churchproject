@@ -1,0 +1,641 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}CAAC Church | Warm & Welcoming{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts - Warm & Friendly -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital@0;1&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome 6 (correct CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #fefcf7;
+            color: #3a3a3a;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Merriweather', serif;
+            font-weight: 400;
+            color: #5e4b3c;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Navigation - Warm & Simple */
+        nav {
+            background: white;
+            padding: 18px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #f0e7db;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            font-size: 1.8rem;
+            color: #b38b6d;
+        }
+
+        .logo h2 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            color: #5e4b3c;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 32px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #5e4b3c;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        nav ul li a:hover {
+            color: #b38b6d;
+        }
+
+        .nav-btn {
+            background: #b38b6d;
+            color: white !important;
+            padding: 8px 18px;
+            border-radius: 40px;
+        }
+        .nav-btn:hover {
+            background: #9b7357;
+            color: white !important;
+        }
+
+        /* Hero Section - Warm & Inviting */
+        .hero {
+            background: linear-gradient(115deg, rgba(94,75,60,0.7) 0%, rgba(180,130,100,0.6) 100%),
+                        url('') center/cover no-repeat;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.8rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+            color: white;
+            font-family: 'Merriweather', serif;
+            letter-spacing: -0.5px;
+            text-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        .hero h1 span {
+            font-style: italic;
+            font-weight: 300;
+            color: #fbe9d2;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 35px;
+            opacity: 0.9;
+            font-weight: 300;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 14px 34px;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            border: none;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .btn-primary {
+            background: #e6c9a8;
+            color: #5e4b3c;
+        }
+        .btn-primary:hover {
+            background: #dbb58b;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+        }
+
+        .btn-outline-light {
+            background: transparent;
+            border: 2px solid rgba(255,255,255,0.7);
+            color: white;
+        }
+        .btn-outline-light:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Service Times Cards */
+        .services {
+            padding: 90px 0;
+            background: #fffcf8;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: #5e4b3c;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+        .section-header p {
+            color: #8b7a6b;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 40px 25px;
+            border-radius: 24px;
+            text-align: center;
+            box-shadow: 0 15px 30px rgba(94,75,60,0.05);
+            transition: all 0.3s ease;
+            border: 1px solid #f0e4d5;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 40px rgba(94,75,60,0.1);
+            border-color: #dcc9b5;
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: #f9ede1;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 2rem;
+            color: #b38b6d;
+        }
+
+        .service-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+            color: #5e4b3c;
+        }
+
+        .service-time {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #b38b6d;
+            margin-bottom: 5px;
+        }
+        .service-name {
+            color: #7a6a5c;
+            margin-bottom: 12px;
+        }
+        .kids-note {
+            font-size: 0.9rem;
+            background: #faf1e9;
+            padding: 8px 12px;
+            border-radius: 40px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 12px;
+            color: #6b5b4d;
+        }
+
+        /* Belief Section */
+        .belief-section {
+            padding: 80px 0;
+            background: #fff6ed;
+        }
+
+        .belief-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        @media (max-width: 900px) {
+            .belief-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        .belief-text {
+            padding-right: 20px;
+        }
+
+        .belief-text h3 {
+            font-size: 2rem;
+            color: #5e4b3c;
+            margin-bottom: 20px;
+            font-weight: 300;
+            line-height: 1.3;
+        }
+
+        .belief-text p {
+            color: #6b5b4d;
+            margin-bottom: 24px;
+            font-size: 1.05rem;
+        }
+
+        .stats-row {
+            display: flex;
+            gap: 40px;
+            margin: 40px 0 20px;
+        }
+        .stat-item {
+            text-align: left;
+        }
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #b38b6d;
+            line-height: 1;
+        }
+        .stat-label {
+            font-size: 0.85rem;
+            color: #8b7a6b;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .belief-image {
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 25px 40px rgba(94,75,60,0.15);
+            height: 450px;
+            background: url('https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=1000&q=80') center/cover no-repeat;
+        }
+
+        /* Kids Safety Badge */
+        .safety-badge {
+            background: white;
+            border-radius: 60px;
+            padding: 16px 28px;
+            display: inline-flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            border: 1px solid #e9d9cb;
+        }
+        .badge-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .badge-item i {
+            color: #b38b6d;
+            font-size: 1rem;
+        }
+
+        /* Congregations */
+        .congregation-section {
+            padding: 90px 0;
+        }
+        .congregation-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        @media (max-width: 700px) {
+            .congregation-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .cong-card {
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.03);
+            border: 1px solid #f0e4d5;
+            transition: all 0.3s ease;
+        }
+        .cong-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 40px rgba(94,75,60,0.08);
+        }
+        .cong-header {
+            padding: 30px 25px 20px;
+            background: #faf3ec;
+            border-bottom: 1px solid #e9d9cb;
+        }
+        .cong-header h3 {
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #5e4b3c;
+        }
+        .cong-header i {
+            color: #b38b6d;
+        }
+        .cong-body {
+            padding: 25px;
+        }
+        .cong-detail {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+            color: #6b5b4d;
+        }
+        .cong-detail i {
+            width: 20px;
+            color: #b38b6d;
+        }
+        .cong-btn {
+            display: inline-block;
+            margin-top: 15px;
+            color: #b38b6d;
+            font-weight: 500;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: border 0.2s;
+        }
+        .cong-btn:hover {
+            border-bottom-color: #b38b6d;
+        }
+
+        /* Visit Section */
+        .visit-section {
+            padding: 90px 0;
+            background: #fcf7f1;
+        }
+
+        .visit-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 50px 0;
+        }
+
+        .visit-item {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid #f0e4d5;
+            transition: all 0.3s ease;
+        }
+        .visit-item:hover {
+            background: #fff9f4;
+            border-color: #dcc9b5;
+        }
+        .visit-item i {
+            font-size: 2rem;
+            color: #b38b6d;
+            margin-bottom: 20px;
+        }
+        .visit-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .service-flow {
+            background: white;
+            border-radius: 24px;
+            padding: 40px;
+            margin-top: 40px;
+            border: 1px solid #f0e4d5;
+        }
+        .flow-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .step {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            background: #fcf7f1;
+            border-radius: 40px;
+        }
+        .step-num {
+            width: 32px; height: 32px;
+            background: #b38b6d;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* Next Steps */
+        .next-steps {
+            padding: 90px 0;
+        }
+        .next-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        @media (max-width: 800px) {
+            .next-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .next-card {
+            background: white;
+            padding: 40px 25px;
+            border-radius: 24px;
+            text-align: center;
+            border: 1px solid #f0e4d5;
+            transition: all 0.3s ease;
+        }
+        .next-card:hover {
+            background: #fff9f4;
+            transform: translateY(-5px);
+        }
+        .next-icon {
+            width: 80px; height: 80px;
+            background: #f9ede1;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
+            color: #b38b6d;
+        }
+        .next-card h3 {
+            margin-bottom: 10px;
+            color: #5e4b3c;
+        }
+        .next-card p {
+            color: #7a6a5c;
+            margin-bottom: 25px;
+        }
+        .next-link {
+            color: #b38b6d;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Footer */
+        footer {
+            background: #5e4b3c;
+            color: #f0e4d5;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .footer-content {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .footer-content i {
+            color: #e6c9a8;
+            margin: 0 10px 20px;
+            font-size: 1.2rem;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 25px 0;
+            flex-wrap: wrap;
+        }
+        .footer-links a {
+            color: #f0e4d5;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .footer-links a:hover {
+            color: #e6c9a8;
+        }
+
+        /* animations */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-up {
+            animation: fadeUp 0.6s ease forwards;
+        }
+        .delay-1 { animation-delay: 0.1s; opacity: 0; }
+        .delay-2 { animation-delay: 0.2s; opacity: 0; }
+        .delay-3 { animation-delay: 0.3s; opacity: 0; }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+    <div class="logo">
+        <i class="fas fa-tree"></i>
+        <h2>CAAC Church</h2>
+    </div>
+    <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'visit' %}">Visit</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+        <li><a href="{% url 'visit' %}" class="nav-btn">Plan a Visit</a></li>
+    </ul>
+</nav>
+
+<!-- Main Content Block -->
+{% block content %}
+{% endblock %}
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <i class="fas fa-tree fa-2x"></i>
+        <h3 style="color:#e6c9a8; font-weight:300; margin:10px 0;">CAAC Church</h3>
+        <p>39 Ringrose Crescent, Isaacs · Sundays 9:15 & 11:15</p>
+        <div class="footer-links">
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'visit' %}">Visit</a>
+            <a href="{% url 'contact' %}">Contact</a>
+        </div>
+        <p style="font-size:0.8rem; margin-top:25px;">© 2026 CAAC Church · All are welcome</p>
+    </div>
+</footer>
+
+<script>
+    document.querySelectorAll('a[href="#"]').forEach(link => {
+        link.addEventListener('click', (e) => e.preventDefault());
+    });
+</script>
+</body>
+</html>

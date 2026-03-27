@@ -1,0 +1,116 @@
+{% extends "church/base.html" %}
+
+{% block title %}CAAC Church | Plan Your Visit{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section style="background: linear-gradient(115deg, rgba(94,75,60,0.85) 0%, rgba(180,130,100,0.8) 100%), url('https://images.unsplash.com/photo-1438032005730-c779502df39b?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; min-height: 40vh; display: flex; align-items: center; text-align: center; color: white;">
+    <div class="container" style="width: 100%;">
+        <div class="fade-up">
+            <h1 style="font-size: 3.5rem; color: white; margin-bottom: 20px;">Plan Your Visit</h1>
+            <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto;">We want your first visit to be a positive experience</p>
+        </div>
+    </div>
+</section>
+
+<!-- Introduction -->
+<section class="belief-section" style="padding: 60px 0;">
+    <div class="container">
+        <div class="belief-grid" style="grid-template-columns: 1fr;">
+            <div class="belief-text fade-up">
+                <p style="font-size: 1.1rem;">We know that getting to know new people and going to a new church for the first time can be nerve racking. Therefore, we want to make sure that your first visit to our church is a positive one! Below is all the information you'll need to plan your first visit. Take a look and feel free to ask questions below!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Location & Parking -->
+<section class="services" style="background: #fffcf8;">
+    <div class="container">
+        <div class="section-header fade-up">
+            <h2>Where to Find Us</h2>
+        </div>
+        <div class="visit-grid" style="grid-template-columns: repeat(2, 1fr);">
+            <div class="visit-item fade-up delay-1">
+                <i class="fas fa-map-pin"></i>
+                <h4>Where we are</h4>
+                <p>CAACC is located at 39 Ringrose Crescent, Isaacs, Canberra</p>
+            </div>
+            <div class="visit-item fade-up delay-2">
+                <i class="fas fa-car"></i>
+                <h4>Where to park</h4>
+                <p>Carpark with plenty of car spaces. If by some chance the car park is full, there is additional parking in front of the early learning centre next to church.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- What to Expect -->
+<section class="visit-section">
+    <div class="container">
+        <div class="section-header fade-up">
+            <h2>What Can I Expect?</h2>
+        </div>
+
+        <div class="service-flow fade-up">
+            <h3 style="margin-bottom: 10px; color:#5e4b3c;">What is a church service like?</h3>
+            <p style="color:#7a6a5c; margin-bottom: 25px;">We have a lovely welcoming team who will greet you at our front door.</p>
+            <p style="margin-bottom: 20px;">Our Sunday Church services are roughly 60-75 minutes in length. This is how the services usually work:</p>
+            <div class="flow-steps">
+                <div class="step"><span class="step-num">1</span> Welcome & Scripture reading</div>
+                <div class="step"><span class="step-num">2</span> Worship singing</div>
+                <div class="step"><span class="step-num">3</span> Kids spot</div>
+                <div class="step"><span class="step-num">4</span> Prayer</div>
+                <div class="step"><span class="step-num">5</span> Bible reading</div>
+                <div class="step"><span class="step-num">6</span> Sermon (25 min)</div>
+                <div class="step"><span class="step-num">7</span> Communion*</div>
+                <div class="step"><span class="step-num">8</span> Announcements</div>
+                <div class="step"><span class="step-num">9</span> Fellowship time</div>
+            </div>
+            <p style="margin-top: 20px; font-size:0.9rem; color:#8b7a6b;">*First Sunday of the month is the Lord's Supper</p>
+            <p style="margin-top: 20px; font-size:0.95rem;">A church member will stand at the front, introduce themselves and read something from the Scriptures and how the God we worship is uniquely magnificent and truly life-changing. The song lyrics are projected onto the screens, and there is absolutely no pressure or expectations on anyone to sing or pray or introduce themselves.</p>
+        </div>
+
+        <div class="service-flow fade-up" style="margin-top: 30px;">
+            <h3 style="margin-bottom: 10px; color:#5e4b3c;">Can I come if...?</h3>
+            <p>We understand that coming to church for the first time can be nerve racking, especially when you don't know what to expect. Further, sometimes church is portrayed as a place where only good 'religious' people go. We want to break this stereotype, because it is simply not true. Jesus himself said that he has come to help those who are not perfect.</p>
+            <p style="margin-top: 20px;">At CAACC, we are a church of people from many backgrounds and experiences. It doesn't matter who you are, or what you have done, we would love to have you visit us.</p>
+        </div>
+
+        <div class="service-flow fade-up" style="margin-top: 30px;">
+            <h3 style="margin-bottom: 10px; color:#5e4b3c;">What about my Children?</h3>
+            <p>Here at CAACC, we love having children join us. Jesus said "Let the little children come to me, and do not hinder them" (Matthew 19:14). If you have children, they are very welcome to join us!</p>
+            <div class="safety-badge" style="margin-top: 25px; justify-content: center;">
+                <span class="badge-item"><i class="fas fa-id-card"></i> WWVP Certified</span>
+                <span class="badge-item"><i class="fas fa-shield-heart"></i> Safe Ministry Trained</span>
+                <span class="badge-item"><i class="far fa-heart"></i> Child Safe Environment</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Service Times Summary -->
+<section class="services">
+    <div class="container">
+        <div class="section-header fade-up">
+            <h2>Sunday Services</h2>
+        </div>
+        <div class="service-grid">
+            <div class="service-card fade-up delay-1">
+                <div class="service-icon"><i class="far fa-clock"></i></div>
+                <h3>English International</h3>
+                <div class="service-time">9:15 AM</div>
+                <div class="service-name">Contemporary · Multicultural</div>
+                <div class="kids-note"><i class="fas fa-child"></i> Kids Church available</div>
+            </div>
+            <div class="service-card fade-up delay-2">
+                <div class="service-icon"><i class="far fa-clock"></i></div>
+                <h3>Cantonese Service</h3>
+                <div class="service-time">11:15 AM</div>
+                <div class="service-name">Cantonese · Warm community</div>
+                <div class="kids-note"><i class="fas fa-child"></i> Kids Church available</div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

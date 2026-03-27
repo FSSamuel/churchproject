@@ -1,0 +1,113 @@
+@"
+{% extends "church/base.html" %}
+
+{% block title %}CAAC Church | Contact Us{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section style="background: linear-gradient(115deg, rgba(94,75,60,0.85) 0%, rgba(180,130,100,0.8) 100%), url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; min-height: 40vh; display: flex; align-items: center; text-align: center; color: white;">
+    <div class="container" style="width: 100%;">
+        <div class="fade-up">
+            <h1 style="font-size: 3.5rem; color: white; margin-bottom: 20px;">Contact Us</h1>
+            <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto;">We'd love to hear from you</p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Information -->
+<section class="services" style="padding: 80px 0;">
+    <div class="container">
+        <div class="visit-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); margin-bottom: 50px;">
+            <div class="visit-item fade-up delay-1">
+                <i class="fas fa-map-marker-alt"></i>
+                <h4>Address</h4>
+                <p>39 Ringrose Crescent<br>Isaacs, Canberra<br>ACT 2607</p>
+            </div>
+            <div class="visit-item fade-up delay-2">
+                <i class="fas fa-envelope"></i>
+                <h4>Email</h4>
+                <p><a href="mailto:info@caacc.org.au" style="color: #b38b6d; text-decoration: none;">info@caacc.org.au</a></p>
+            </div>
+            <div class="visit-item fade-up delay-3">
+                <i class="fas fa-phone"></i>
+                <h4>Phone</h4>
+                <p>(02) 1234 5678</p>
+            </div>
+        </div>
+
+        <div class="service-flow fade-up" style="margin-bottom: 40px;">
+            <h3 style="margin-bottom: 20px;">Service Times</h3>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+                <div>
+                    <p><strong>English International Service</strong><br>9:15 AM Sunday</p>
+                </div>
+                <div>
+                    <p><strong>Cantonese Service</strong><br>11:15 AM Sunday</p>
+                </div>
+            </div>
+            <p style="margin-top: 20px;"><i class="fas fa-child"></i> Kids Church available at both services</p>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="service-flow fade-up" style="margin-bottom: 40px;">
+            <h3 style="margin-bottom: 20px;">Send Us a Message</h3>
+            <form method="POST" style="max-width: 600px; margin: 0 auto;">
+                {% csrf_token %}
+                <div style="margin-bottom: 20px;">
+                    <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 12px; border: 1px solid #e9d9cb; border-radius: 8px; font-family: inherit;">
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 12px; border: 1px solid #e9d9cb; border-radius: 8px; font-family: inherit;">
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <textarea name="message" placeholder="Your Message" rows="5" style="width: 100%; padding: 12px; border: 1px solid #e9d9cb; border-radius: 8px; font-family: inherit;"></textarea>
+                </div>
+                <div style="text-align: center;">
+                    <button type="submit" class="btn btn-primary" style="padding: 12px 30px;"><i class="fas fa-paper-plane"></i> Send Message</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Facility Rental Section -->
+        <div class="service-flow fade-up" style="margin-top: 40px; background: #f9ede1;">
+            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                <i class="fas fa-building" style="font-size: 2rem; color: #b38b6d;"></i>
+                <h3 style="margin: 0;">Facility Rental</h3>
+            </div>
+            <p>Our church facilities are available for rent for community events, meetings, and special occasions. We offer flexible spaces suitable for:</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 25px 0;">
+                <div><i class="fas fa-check" style="color: #b38b6d; margin-right: 8px;"></i> Community gatherings</div>
+                <div><i class="fas fa-check" style="color: #b38b6d; margin-right: 8px;"></i> Wedding ceremonies and receptions</div>
+                <div><i class="fas fa-check" style="color: #b38b6d; margin-right: 8px;"></i> Funerals and memorial services</div>
+                <div><i class="fas fa-check" style="color: #b38b6d; margin-right: 8px;"></i> Concerts and performances</div>
+                <div><i class="fas fa-check" style="color: #b38b6d; margin-right: 8px;"></i> Conferences and workshops</div>
+                <div><i class="fas fa-check" style="color: #b38b6d; margin-right: 8px;"></i> Regular community group meetings</div>
+            </div>
+            
+            <h4 style="margin: 20px 0 10px;">Our Facilities Include:</h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-bottom: 25px;">
+                <div><i class="fas fa-church" style="color: #b38b6d; margin-right: 8px;"></i> Main sanctuary (seats up to 200)</div>
+                <div><i class="fas fa-utensils" style="color: #b38b6d; margin-right: 8px;"></i> Kitchen facilities</div>
+                <div><i class="fas fa-users" style="color: #b38b6d; margin-right: 8px;"></i> Meeting rooms (various sizes)</div>
+                <div><i class="fas fa-car" style="color: #b38b6d; margin-right: 8px;"></i> Ample parking</div>
+                <div><i class="fas fa-wheelchair" style="color: #b38b6d; margin-right: 8px;"></i> Wheelchair accessible</div>
+                <div><i class="fas fa-music" style="color: #b38b6d; margin-right: 8px;"></i> Audio-visual equipment available</div>
+            </div>
+            
+            <p style="margin-top: 20px;"><strong>For rental inquiries, please contact us at:</strong> <a href="mailto:rental@caacc.org.au" style="color: #b38b6d;">rental@caacc.org.au</a> or call (02) 1234 5678</p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">*Please note that all rentals are subject to availability and our facility usage policy. We reserve the right to approve all rental requests.</p>
+        </div>
+
+        <!-- Get Involved -->
+        <div class="service-flow fade-up" style="margin-top: 30px; text-align: center;">
+            <h3>Get Involved</h3>
+            <p>Interested in joining one of our Sunday services or getting connected with our Bible study groups? We'd love to help you find your place in our church family.</p>
+            <div class="btn-group" style="margin-top: 25px;">
+                <a href="{% url 'visit' %}" class="btn btn-primary"><i class="fas fa-calendar-check"></i> Plan a Visit</a>
+                <a href="mailto:info@caacc.org.au" class="btn btn-outline-light" style="background: #b38b6d; color: white;"><i class="fas fa-envelope"></i> Email Us</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+"@ | Out-File -FilePath "C:\Users\famey\churchproject\church\templates\church\contact.html" -Encoding UTF8

@@ -1,0 +1,207 @@
+{% extends "church/base.html" %}
+
+{% block title %}CAAC Church | Home{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content fade-up">
+        <h1>Welcome <span>home.</span></h1>
+        <p>A place where faith, hope, and love come together — you belong here.</p>
+        <div class="btn-group">
+            <a href="{% url 'visit' %}" class="btn btn-primary"><i class="far fa-calendar-check"></i> Plan a Visit</a>
+            <a href="#" class="btn btn-outline-light"><i class="far fa-play-circle"></i> Watch Online</a>
+        </div>
+    </div>
+</section>
+
+<!-- Service Times -->
+<section class="services">
+    <div class="container">
+        <div class="section-header fade-up">
+            <h2>Sunday Services</h2>
+            <p>Two congregations, one family. Join us this Sunday.</p>
+        </div>
+
+        <div class="service-grid">
+            <div class="service-card fade-up delay-1">
+                <div class="service-icon"><i class="far fa-clock"></i></div>
+                <h3>English International</h3>
+                <div class="service-time">9:15 AM</div>
+                <div class="service-name">Contemporary · Multicultural</div>
+                <div class="kids-note"><i class="fas fa-child"></i> Kids Church available</div>
+            </div>
+            <div class="service-card fade-up delay-2">
+                <div class="service-icon"><i class="far fa-clock"></i></div>
+                <h3>Cantonese Service</h3>
+                <div class="service-time">11:15 AM</div>
+                <div class="service-name">Cantonese · Warm community</div>
+                <div class="kids-note"><i class="fas fa-child"></i> Kids Church available</div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 35px;" class="fade-up">
+            <div class="safety-badge">
+                <span class="badge-item"><i class="fas fa-id-card"></i> WWVP Certified</span>
+                <span class="badge-item"><i class="fas fa-shield-heart"></i> Safe Ministry Trained</span>
+                <span class="badge-item"><i class="far fa-heart"></i> Child Safe Environment</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Belief / Who We Are -->
+<section class="belief-section">
+    <div class="container belief-grid">
+        <div class="belief-text fade-up">
+            <h3>We believe you belong here.</h3>
+            <p>We believe God made people in his image. Sin corrupted that image, and Jesus came to live as the perfect human and die as a sacrifice — so we might be restored to relationship with God.</p>
+            <p>We long for the people of Canberra to know Jesus, his power and his message, and have it transform them. You are welcome here — no matter your background or story.</p>
+
+            <div class="stats-row">
+                <div class="stat-item">
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">Services every Sunday</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">30+</div>
+                    <div class="stat-label">Years in Canberra</div>
+                </div>
+            </div>
+            <a href="{% url 'visit' %}" class="btn btn-primary" style="margin-top: 15px;"><i class="far fa-compass"></i> Plan Your Visit</a>
+        </div>
+        <div class="belief-image fade-up delay-1"></div>
+    </div>
+</section>
+
+<!-- Congregations -->
+<section class="congregation-section">
+    <div class="container">
+        <div class="section-header fade-up">
+            <h2>Our Congregations</h2>
+            <p>Two services, one church family</p>
+        </div>
+        <div class="congregation-grid">
+            <div class="cong-card fade-up delay-1">
+                <div class="cong-header">
+                    <h3><i class="fas fa-globe"></i> English International</h3>
+                </div>
+                <div class="cong-body">
+                    <div class="cong-detail"><i class="far fa-clock"></i> Sundays · 9:15 AM</div>
+                    <div class="cong-detail"><i class="fas fa-map-pin"></i> Isaacs, Canberra</div>
+                    <div class="cong-detail"><i class="fas fa-child"></i> Kids Church available</div>
+                    <p style="margin: 20px 0; color:#7a6a5c;">A vibrant, multicultural service with contemporary worship and relevant teaching.</p>
+                    <a href="{% url 'english' %}" class="cong-btn">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="cong-card fade-up delay-2">
+                <div class="cong-header">
+                    <h3><i class="fas fa-globe-asia"></i> Cantonese Congregation</h3>
+                </div>
+                <div class="cong-body">
+                    <div class="cong-detail"><i class="far fa-clock"></i> Sundays · 11:15 AM</div>
+                    <div class="cong-detail"><i class="fas fa-map-pin"></i> Isaacs, Canberra</div>
+                    <div class="cong-detail"><i class="fas fa-child"></i> Kids Church available</div>
+                    <p style="margin: 20px 0; color:#7a6a5c;">Worship in Cantonese with a warm, welcoming community rooted in Biblical teaching.</p>
+                    <a href="{% url 'cantonese' %}" class="cong-btn">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Planning Your Visit -->
+<section class="visit-section">
+    <div class="container">
+        <div class="section-header fade-up">
+            <h2>Planning Your First Visit?</h2>
+            <p>We know it can be nerve-racking. Here's what to expect.</p>
+        </div>
+
+        <div class="visit-grid">
+            <div class="visit-item fade-up delay-1">
+                <i class="fas fa-map-pin"></i>
+                <h4>Where we are</h4>
+                <p>39 Ringrose Crescent, Isaacs, Canberra</p>
+            </div>
+            <div class="visit-item fade-up delay-1">
+                <i class="fas fa-car"></i>
+                <h4>Parking</h4>
+                <p>Plenty of on-site parking + overflow next door.</p>
+            </div>
+            <div class="visit-item fade-up delay-2">
+                <i class="fas fa-hand-peace"></i>
+                <h4>Warm welcome</h4>
+                <p>No pressure to participate. Come as you are.</p>
+            </div>
+            <div class="visit-item fade-up delay-2">
+                <i class="far fa-clock"></i>
+                <h4>Service length</h4>
+                <p>60–75 minutes · Fellowship after</p>
+            </div>
+            <div class="visit-item fade-up delay-3">
+                <i class="fas fa-children"></i>
+                <h4>Children</h4>
+                <p>Lively kids program during both services</p>
+            </div>
+            <div class="visit-item fade-up delay-3">
+                <i class="fas fa-heart"></i>
+                <h4>Everyone welcome</h4>
+                <p>Whatever your background, you belong here.</p>
+            </div>
+        </div>
+
+        <div class="service-flow fade-up">
+            <h3 style="margin-bottom: 10px; color:#5e4b3c;">What is a service like?</h3>
+            <p style="color:#7a6a5c; margin-bottom: 25px;">Our services usually flow like this:</p>
+            <div class="flow-steps">
+                <div class="step"><span class="step-num">1</span> Welcome</div>
+                <div class="step"><span class="step-num">2</span> Worship</div>
+                <div class="step"><span class="step-num">3</span> Kids spot</div>
+                <div class="step"><span class="step-num">4</span> Prayer</div>
+                <div class="step"><span class="step-num">5</span> Bible reading</div>
+                <div class="step"><span class="step-num">6</span> Sermon (25 min)</div>
+                <div class="step"><span class="step-num">7</span> Communion*</div>
+                <div class="step"><span class="step-num">8</span> Fellowship</div>
+            </div>
+            <p style="margin-top: 20px; font-size:0.9rem; color:#8b7a6b;">*First Sunday of the month</p>
+        </div>
+
+        <div style="background: #fff2e8; border-radius: 24px; padding: 35px; margin-top: 40px;" class="fade-up">
+            <h4 style="font-size:1.3rem; margin-bottom: 15px; color:#5e4b3c;"><i class="fas fa-question-circle" style="margin-right: 8px;"></i>Can I come if I'm not perfect?</h4>
+            <p style="color:#6b5b4d; font-size:1.05rem;">Absolutely. Church isn't a museum for saints — it's a hospital for the broken. Jesus said he came to help those who aren't perfect. Whatever your story, you are welcome here.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Next Steps -->
+<section class="next-steps">
+    <div class="container">
+        <div class="section-header fade-up">
+            <h2>Next Steps</h2>
+            <p>Wherever you are in your journey, there's a next step for you.</p>
+        </div>
+
+        <div class="next-grid">
+            <div class="next-card fade-up delay-1">
+                <div class="next-icon"><i class="fas fa-flag"></i></div>
+                <h3>I'm New</h3>
+                <p>Find service times, directions, and what to expect.</p>
+                <a href="{% url 'visit' %}" class="next-link">Get started <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="next-card fade-up delay-2">
+                <div class="next-icon"><i class="fas fa-handshake"></i></div>
+                <h3>Get Connected</h3>
+                <p>Join a life group, meet others, grow in faith.</p>
+                <a href="{% url 'get_connected' %}" class="next-link">Find community <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="next-card fade-up delay-3">
+                <div class="next-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                <h3>Serve Others</h3>
+                <p>Discover your gifts and make a difference.</p>
+                <a href="{% url 'serve_others' %}" class="next-link">Serve with us <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

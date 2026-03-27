@@ -1,0 +1,242 @@
+{% extends "church/base.html" %}
+
+{% block title %}Serve Others | Ministries | CAAC Church{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section style="background: linear-gradient(115deg, rgba(94,75,60,0.85) 0%, rgba(180,130,100,0.8) 100%), url('https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; min-height: 40vh; display: flex; align-items: center; text-align: center; color: white;">
+    <div class="container" style="width: 100%;">
+        <div class="fade-up">
+            <h1 style="font-size: 3.5rem; color: white; margin-bottom: 20px;">Serve Others</h1>
+            <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto;">Discover your gifts and make a difference in our church and community</p>
+        </div>
+    </div>
+</section>
+
+<!-- Introduction -->
+<section class="belief-section" style="padding: 60px 0;">
+    <div class="container">
+        <div class="belief-grid" style="grid-template-columns: 1fr;">
+            <div class="belief-text fade-up">
+                <p style="font-size: 1.2rem; line-height: 1.8; text-align: center;">Every one of us has been given gifts to serve others and build up the church. Whether you have a little time or a lot, there's a place for you to serve and make an impact.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Ministry Areas -->
+<section class="services" style="background: #fffcf8;">
+    <div class="container">
+        <div class="section-header fade-up">
+            <h2>Ministry Areas</h2>
+            <p>Find where your gifts can make a difference</p>
+        </div>
+
+        <div class="service-grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
+            <div class="service-card fade-up delay-1" style="text-align: left;">
+                <div class="service-icon"><i class="fas fa-child"></i></div>
+                <h3>Kids Church</h3>
+                <p>Help children discover God's love through engaging lessons, activities, and care. Opportunities include:</p>
+                <ul style="margin-top: 15px; list-style: none;">
+                    <li><i class="fas fa-check" style="color: #b38b6d; margin-right: 8px;"></i> Teaching/Leading</li>
+                    <li><i class="fas fa-check" style="color: #b38b6d; margin-right: 8px;"></i> Assisting</li>
+                    <li><i class="fas fa-check" style="color: #b38b6d; margin-right: 8px;"></i> Craft/Activity Prep</li>
+                    <li><i class="fas fa-check" style="color: #b38b6d; margin-right: 8px;"></i> Welcome/Registration</li>
+                </ul>
+                <div class="kids-note" style="margin-top: 15px;"><i class="fas fa-clock"></i> Sundays during service</div>
+            </div>
+
+            <div class="service-card fade-up delay-2" style="text-align: left;">
+                <div class="service-icon"><i class="fas fa-music"></i></div>
+                <h3>Music & Worship</h3>
+                <p>Use your musical gifts to lead our congregation in worship. Opportunities include:</p>
+                <ul style="margin-top: 15px; list-style: none;">
+                    <li><i class="fas fa-check" style="color: #b38b6d; margin-right: 8px;"></i> Vocals</li>
+                    <li><i class="fas fa-check" style="color: #b38b6d; margin-right: 8px;"></i> Instruments</li>
+                    <li><i class="fas fa-check" style="color: #b38b6d; margin-right: 8px;"></i> Sound/AV</li>
+                    <li><i class="fas fa-check" style="color: #b38b6d; margin-right: 8px;"></i> Lyrics/Projection</li>
+                </ul>
+                <div class="kids-note" style="margin-top: 15px;"><i class="fas fa-clock"></i> Sundays & practice nights</div>
+            </div>
+
+            <div class="service-card fade-up delay-3" style="text-align: left;">
+                <div class="service-icon"><i class="fas fa-hand-peace"></i></div>
+                <h3>Welcome & Hospitality</h3>
+                <p>Be the first friendly face people see. Opportunities include:</p>
+                <ul style="margin-top: 15px; list-style: none;">
+                    <li><i class="fas fa-check" style="color: #b38b6d; margin-right: 8px;"></i> Greeting at the door</li>
+                    <li><i class="fas fa-check" style="color: #b38b6d; margin-right: 8px;"></i> Morning tea preparation</li>
+                    <li><i class="fas fa-check" style="color: #b38b6d; margin-right: 8px;"></i> Newcomers follow-up</li>
+                    <li><i class="fas fa-check" style="color: #b38b6d; margin-right: 8px;"></i> Setup/cleanup</li>
+                </ul>
+                <div class="kids-note" style="margin-top: 15px;"><i class="fas fa-clock"></i> Sundays before/after service</div>
+            </div>
+
+            <div class="service-card fade-up delay-4" style="text-align: left;">
+                <div class="service-icon"><i class="fas fa-users"></i></div>
+                <h3>Life Group Leadership</h3>
+                <p>Lead or assist a small group. Opportunities include:</p>
+                <ul style="margin-top: 15px; list-style: none;">
+                    <li><i class="fas fa-check" style="color: #b38b6d; margin-right: 8px;"></i> Group Leader</li>
+                    <li><i class="fas fa-check" style="color: #b38b6d; margin-right: 8px;"></i> Assistant Leader</li>
+                    <li><i class="fas fa-check" style="color: #b38b6d; margin-right: 8px;"></i> Discussion Facilitator</li>
+                    <li><i class="fas fa-check" style="color: #b38b6d; margin-right: 8px;"></i> Host (open your home)</li>
+                </ul>
+                <div class="kids-note" style="margin-top: 15px;"><i class="fas fa-clock"></i> Weekly or fortnightly</div>
+            </div>
+
+            <div class="service-card fade-up delay-5" style="text-align: left;">
+                <div class="service-icon"><i class="fas fa-pray"></i></div>
+                <h3>Prayer Ministry</h3>
+                <p>Support our church through prayer. Opportunities include:</p>
+                <ul style="margin-top: 15px; list-style: none;">
+                    <li><i class="fas fa-check" style="color: #b38b6d; margin-right: 8px;"></i> Prayer team member</li>
+                    <li><i class="fas fa-check" style="color: #b38b6d; margin-right: 8px;"></i> Prayer meeting attendance</li>
+                    <li><i class="fas fa-check" style="color: #b38b6d; margin-right: 8px;"></i> Prayer chain participation</li>
+                    <li><i class="fas fa-check" style="color: #b38b6d; margin-right: 8px;"></i> Prayer after service</li>
+                </ul>
+                <div class="kids-note" style="margin-top: 15px;"><i class="fas fa-clock"></i> Flexible times</div>
+            </div>
+
+            <div class="service-card fade-up delay-6" style="text-align: left;">
+                <div class="service-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                <h3>Community Outreach</h3>
+                <p>Share God's love in our community. Opportunities include:</p>
+                <ul style="margin-top: 15px; list-style: none;">
+                    <li><i class="fas fa-check" style="color: #b38b6d; margin-right: 8px;"></i> Food pantry</li>
+                    <li><i class="fas fa-check" style="color: #b38b6d; margin-right: 8px;"></i> Community events</li>
+                    <li><i class="fas fa-check" style="color: #b38b6d; margin-right: 8px;"></i> Visitation</li>
+                    <li><i class="fas fa-check" style="color: #b38b6d; margin-right: 8px;"></i> Practical help</li>
+                </ul>
+                <div class="kids-note" style="margin-top: 15px;"><i class="fas fa-clock"></i> Monthly/As needed</div>
+            </div>
+
+            <div class="service-card fade-up delay-7" style="text-align: left;">
+                <div class="service-icon"><i class="fas fa-tools"></i></div>
+                <h3>Facilities & Setup</h3>
+                <p>Help maintain our church facilities. Opportunities include:</p>
+                <ul style="margin-top: 15px; list-style: none;">
+                    <li><i class="fas fa-check" style="color: #b38b6d; margin-right: 8px;"></i> Setup before service</li>
+                    <li><i class="fas fa-check" style="color: #b38b6d; margin-right: 8px;"></i> Maintenance</li>
+                    <li><i class="fas fa-check" style="color: #b38b6d; margin-right: 8px;"></i> Cleaning rosters</li>
+                    <li><i class="fas fa-check" style="color: #b38b6d; margin-right: 8px;"></i> Grounds care</li>
+                </ul>
+                <div class="kids-note" style="margin-top: 15px;"><i class="fas fa-clock"></i> Flexible times</div>
+            </div>
+
+            <div class="service-card fade-up delay-8" style="text-align: left;">
+                <div class="service-icon"><i class="fas fa-camera"></i></div>
+                <h3>Media & Communications</h3>
+                <p>Help share what's happening at church. Opportunities include:</p>
+                <ul style="margin-top: 15px; list-style: none;">
+                    <li><i class="fas fa-check" style="color: #b38b6d; margin-right: 8px;"></i> Photography</li>
+                    <li><i class="fas fa-check" style="color: #b38b6d; margin-right: 8px;"></i> Social media</li>
+                    <li><i class="fas fa-check" style="color: #b38b6d; margin-right: 8px;"></i> Website updates</li>
+                    <li><i class="fas fa-check" style="color: #b38b6d; margin-right: 8px;"></i> Newsletter</li>
+                </ul>
+                <div class="kids-note" style="margin-top: 15px;"><i class="fas fa-clock"></i> Flexible times</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="visit-section" style="background: #fff6ed;">
+    <div class="container">
+        <div class="section-header fade-up">
+            <h2>What Our Volunteers Say</h2>
+        </div>
+
+        <div class="visit-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+            <div class="visit-item fade-up delay-1">
+                <i class="fas fa-quote-left" style="font-size: 1.5rem;"></i>
+                <p style="margin-top: 15px; font-style: italic;">"Serving in Kids Church has been such a blessing. Seeing the kids' faces light up as they learn about Jesus fills my heart with joy."</p>
+                <p style="margin-top: 15px;"><strong>— Michelle, Kids Church Team</strong></p>
+            </div>
+            <div class="visit-item fade-up delay-2">
+                <i class="fas fa-quote-left" style="font-size: 1.5rem;"></i>
+                <p style="margin-top: 15px; font-style: italic;">"Leading worship helps me connect with God in a deeper way. It's a privilege to help others encounter His presence through music."</p>
+                <p style="margin-top: 15px;"><strong>— David, Worship Team</strong></p>
+            </div>
+            <div class="visit-item fade-up delay-3">
+                <i class="fas fa-quote-left" style="font-size: 1.5rem;"></i>
+                <p style="margin-top: 15px; font-style: italic;">"I started helping with setup and discovered I love serving behind the scenes. Every role matters in making church happen!"</p>
+                <p style="margin-top: 15px;"><strong>— James, Facilities Team</strong></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Serving Requirements -->
+<section class="services">
+    <div class="container">
+        <div class="section-header fade-up">
+            <h2>Serving Requirements</h2>
+            <p>We take serving seriously</p>
+        </div>
+
+        <div class="visit-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+            <div class="visit-item fade-up delay-1">
+                <i class="fas fa-heart"></i>
+                <h4>Heart to Serve</h4>
+                <p>A desire to use your gifts to bless others and build up the church.</p>
+            </div>
+            <div class="visit-item fade-up delay-2">
+                <i class="fas fa-id-card"></i>
+                <h4>WWVP Check</h4>
+                <p>For those working with children or vulnerable people, a Working with Vulnerable People card is required.</p>
+            </div>
+            <div class="visit-item fade-up delay-3">
+                <i class="fas fa-shield-heart"></i>
+                <h4>Safe Ministry Training</h4>
+                <p>All volunteers complete our Safe Ministry training to ensure a safe environment for everyone.</p>
+            </div>
+            <div class="visit-item fade-up delay-4">
+                <i class="fas fa-church"></i>
+                <h4>Regular Attendance</h4>
+                <p>Consistent involvement in the life of our church community.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Volunteer Form -->
+<section class="visit-section" style="padding: 80px 0;">
+    <div class="container">
+        <div class="service-flow fade-up" style="text-align: center;">
+            <h3>Ready to Serve?</h3>
+            <p>Fill out the form below and we'll connect you with opportunities that match your gifts and interests.</p>
+            
+            <form method="POST" style="max-width: 600px; margin: 40px auto 0;">
+                {% csrf_token %}
+                <div style="margin-bottom: 20px;">
+                    <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 12px; border: 1px solid #e9d9cb; border-radius: 8px;">
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 12px; border: 1px solid #e9d9cb; border-radius: 8px;">
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <input type="tel" name="phone" placeholder="Phone Number" style="width: 100%; padding: 12px; border: 1px solid #e9d9cb; border-radius: 8px;">
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label style="text-align: left; display: block; margin-bottom: 8px;">Areas of Interest (select all that apply):</label>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; text-align: left;">
+                        <label><input type="checkbox" name="interest" value="kids"> Kids Church</label>
+                        <label><input type="checkbox" name="interest" value="worship"> Music/Worship</label>
+                        <label><input type="checkbox" name="interest" value="welcome"> Welcome/Hospitality</label>
+                        <label><input type="checkbox" name="interest" value="life_group"> Life Group Leadership</label>
+                        <label><input type="checkbox" name="interest" value="prayer"> Prayer Ministry</label>
+                        <label><input type="checkbox" name="interest" value="outreach"> Community Outreach</label>
+                        <label><input type="checkbox" name="interest" value="facilities"> Facilities/Setup</label>
+                        <label><input type="checkbox" name="interest" value="media"> Media/Communications</label>
+                    </div>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <textarea name="message" rows="4" placeholder="Tell us about your gifts, experience, or any questions..." style="width: 100%; padding: 12px; border: 1px solid #e9d9cb; border-radius: 8px;"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary"><i class="fas fa-hand-sparkles"></i> I Want to Serve</button>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

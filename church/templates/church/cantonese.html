@@ -1,0 +1,182 @@
+{% extends "church/base.html" %}
+
+{% block title %}Cantonese Congregation | CAAC Church{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section style="background: linear-gradient(115deg, rgba(94,75,60,0.85) 0%, rgba(180,130,100,0.8) 100%), url('https://images.unsplash.com/photo-1504052434569-70ad5836ab65?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; min-height: 40vh; display: flex; align-items: center; text-align: center; color: white;">
+    <div class="container" style="width: 100%;">
+        <div class="fade-up">
+            <h1 style="font-size: 3.5rem; color: white; margin-bottom: 20px;">Cantonese Congregation</h1>
+            <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto;">一個溫暖、歡迎您的粵語社區 | A warm, welcoming Cantonese community</p>
+        </div>
+    </div>
+</section>
+
+<!-- Service Details -->
+<section class="services" style="padding: 80px 0;">
+    <div class="container">
+        <div class="service-grid" style="grid-template-columns: 1fr 1fr; gap: 40px;">
+            <div class="service-card fade-up delay-1" style="text-align: left;">
+                <div class="service-icon"><i class="far fa-clock"></i></div>
+                <h3>Service Time | 聚會時間</h3>
+                <div class="service-time" style="font-size: 2rem;">11:15 AM</div>
+                <div class="service-name">Every Sunday | 逢星期日</div>
+                <div class="kids-note" style="margin-top: 20px;"><i class="fas fa-child"></i> Kids Church available | 兒童教會</div>
+            </div>
+            <div class="service-card fade-up delay-2" style="text-align: left;">
+                <div class="service-icon"><i class="fas fa-map-pin"></i></div>
+                <h3>Location | 地點</h3>
+                <p>39 Ringrose Crescent<br>Isaacs, Canberra<br>ACT 2607</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About the Service -->
+<section class="visit-section">
+    <div class="container">
+        <div class="section-header fade-up">
+            <h2>About Our Service | 關於我們的聚會</h2>
+        </div>
+        
+        <div class="service-flow fade-up">
+            <p>The Cantonese Congregation is a warm, welcoming community worshipping God in Cantonese. Our service features | 我們的粵語聚會是一個溫暖、歡迎您的社區，使用粵語敬拜神：</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 30px 0;">
+                <div><i class="fas fa-music" style="color: #b38b6d; margin-right: 10px;"></i> Cantonese worship | 粵語詩歌敬拜</div>
+                <div><i class="fas fa-bible" style="color: #b38b6d; margin-right: 10px;"></i> Bible teaching in Cantonese | 粵語聖經教導</div>
+                <div><i class="fas fa-heart" style="color: #b38b6d; margin-right: 10px;"></i> Warm fellowship | 溫暖的團契</div>
+                <div><i class="fas fa-child" style="color: #b38b6d; margin-right: 10px;"></i> Kids Church program | 兒童教會節目</div>
+                <div><i class="fas fa-coffee" style="color: #b38b6d; margin-right: 10px;"></i> Fellowship time after service | 聚會後的聯誼時間</div>
+                <div><i class="fas fa-pray" style="color: #b38b6d; margin-right: 10px;"></i> Prayer ministry | 禱告事工</div>
+            </div>
+        </div>
+
+        <div class="service-flow fade-up" style="margin-top: 30px;">
+            <h3>What to Expect | 聚會流程</h3>
+            <p>Our service typically flows like this | 我們的聚會流程：</p>
+            <div class="flow-steps">
+                <div class="step"><span class="step-num">1</span> Welcome | 歡迎</div>
+                <div class="step"><span class="step-num">2</span> Worship in Song | 詩歌敬拜</div>
+                <div class="step"><span class="step-num">3</span> Kids Spot | 兒童信息</div>
+                <div class="step"><span class="step-num">4</span> Kids Church dismissed | 兒童教會</div>
+                <div class="step"><span class="step-num">5</span> Prayer | 禱告</div>
+                <div class="step"><span class="step-num">6</span> Bible Reading | 讀經</div>
+                <div class="step"><span class="step-num">7</span> Sermon (25-30 min) | 講道</div>
+                <div class="step"><span class="step-num">8</span> Communion* | 聖餐*</div>
+                <div class="step"><span class="step-num">9</span> Closing Song | 結束詩歌</div>
+                <div class="step"><span class="step-num">10</span> Fellowship | 聯誼</div>
+            </div>
+            <p style="margin-top: 20px; font-size:0.9rem;">*First Sunday of the month | 每月第一個星期日</p>
+        </div>
+    </div>
+</section>
+
+<!-- Our Community -->
+<section class="congregation-section" style="background: #fff6ed;">
+    <div class="container">
+        <div class="section-header fade-up">
+            <h2>Our Community | 我們的社區</h2>
+        </div>
+        
+        <div class="belief-grid" style="grid-template-columns: 1fr;">
+            <div class="belief-text fade-up">
+                <p>The Cantonese Congregation has been serving the Canberra community for decades. We are a family of believers from Hong Kong, Mainland China, Malaysia, Singapore, and other regions, united by our love for Jesus and our shared cultural heritage.</p>
+                <p style="margin-top: 15px;">粵語堂服侍坎培拉社區已有數十年。我們是一個由來自香港、中國內地、馬來西亞、新加坡等地區的信徒組成的大家庭，因著對耶穌的愛和共同的文化傳統而聯合在一起。</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 30px 0;">
+                    <div><i class="fas fa-user-friends" style="color: #b38b6d; margin-right: 8px;"></i> Families | 家庭</div>
+                    <div><i class="fas fa-user-graduate" style="color: #b38b6d; margin-right: 8px;"></i> Seniors | 長者</div>
+                    <div><i class="fas fa-briefcase" style="color: #b38b6d; margin-right: 8px;"></i> Professionals | 專業人士</div>
+                    <div><i class="fas fa-church" style="color: #b38b6d; margin-right: 8px;"></i> Cantonese speakers | 粵語使用者</div>
+                </div>
+                <p>Whether you're a long-time believer or exploring faith, you'll find a warm welcome in our Cantonese-speaking family.<br>無論您是信主多年的基督徒還是正在探索信仰，您都會在我們的粵語大家庭中找到溫暖的歡迎。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Kids Church -->
+<section class="services">
+    <div class="container">
+        <div class="section-header fade-up">
+            <h2>Kids Church | 兒童教會</h2>
+        </div>
+        
+        <div class="service-card fade-up" style="text-align: left;">
+            <div class="service-icon"><i class="fas fa-child"></i></div>
+            <h3>Growing Together | 一起成長</h3>
+            <p>Children are welcome to join our Kids Church program during the Cantonese service. Our dedicated team provides a safe, nurturing environment where children learn about God's love in Cantonese.</p>
+            <p style="margin-top: 15px;">我們歡迎孩子們參加粵語聚會期間的兒童教會活動。我們盡心盡力的事工團隊提供一個安全、充滿關愛的環境，讓孩子們用粵語學習神的愛。</p>
+            <div class="safety-badge" style="margin-top: 20px; justify-content: center;">
+                <span class="badge-item"><i class="fas fa-id-card"></i> WWVP Certified</span>
+                <span class="badge-item"><i class="fas fa-shield-heart"></i> Safe Ministry Trained</span>
+                <span class="badge-item"><i class="far fa-heart"></i> Child Safe Environment</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Cell Groups -->
+<section class="visit-section">
+    <div class="container">
+        <div class="section-header fade-up">
+            <h2>Cell Groups | 小組聚會</h2>
+            <p>Growing together through the week | 一週中一起成長</p>
+        </div>
+        
+        <div class="visit-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+            <div class="visit-item fade-up delay-1">
+                <i class="fas fa-home"></i>
+                <h4>Cantonese Small Groups | 粵語小組</h4>
+                <p>Join a Cantonese-speaking small group for Bible study, prayer, and fellowship. Groups meet regularly throughout Canberra.</p>
+                <p>參加粵語小組進行查經、禱告和團契。小組定期在坎培拉各地聚會。</p>
+            </div>
+            <div class="visit-item fade-up delay-2">
+                <i class="fas fa-praying-hands"></i>
+                <h4>Prayer Meetings | 禱告會</h4>
+                <p>Monthly prayer meetings to pray for our church, community, and the world.</p>
+                <p>每月禱告會，為教會、社區和世界禱告。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Upcoming Events -->
+<section class="congregation-section" style="background: #fffcf8;">
+    <div class="container">
+        <div class="section-header fade-up">
+            <h2>Upcoming Events | 即將舉行的活動</h2>
+        </div>
+        
+        <div class="visit-grid" style="grid-template-columns: repeat(2, 1fr);">
+            <div class="visit-item fade-up delay-1">
+                <i class="fas fa-utensils"></i>
+                <h4>Fellowship Lunches | 聯誼午餐</h4>
+                <p>Regular fellowship lunches after the Cantonese service. Join us for food and friendship!</p>
+                <p>粵語聚會後的定期聯誼午餐。與我們一起享受美食和友誼！</p>
+            </div>
+            <div class="visit-item fade-up delay-2">
+                <i class="fas fa-calendar-alt"></i>
+                <h4>Special Services | 特別聚會</h4>
+                <p>Easter, Christmas, and other special services in Cantonese throughout the year.</p>
+                <p>復活節、聖誕節及其他全年特別聚會（粵語）。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Get Involved -->
+<section class="services" style="padding: 80px 0;">
+    <div class="container">
+        <div class="service-flow fade-up" style="text-align: center;">
+            <h3>Join Us | 加入我們</h3>
+            <p>We'd love to welcome you to our Cantonese Congregation. Whether you're visiting for the first time or looking for a church home, you're always welcome.</p>
+            <p>我們歡迎您加入我們的粵語堂。無論您是第一次來訪還是尋找教會之家，我們都歡迎您。</p>
+            <div class="btn-group" style="margin-top: 25px;">
+                <a href="{% url 'visit' %}" class="btn btn-primary"><i class="fas fa-calendar-check"></i> Plan Your Visit | 計劃您的探訪</a>
+                <a href="{% url 'contact' %}" class="btn btn-outline-light" style="background: #b38b6d; color: white;"><i class="fas fa-envelope"></i> Contact Us | 聯繫我們</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
